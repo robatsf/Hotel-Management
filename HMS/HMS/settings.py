@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Base',
-    'accounts',
+     'accounts.apps.AccountsConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -112,3 +113,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# In settings.py
+LOGIN_REDIRECT_URL = '/'  # Redirect to home page after login
+LOGOUT_REDIRECT_URL = '/login'  # Redirect to home page after logout
+
